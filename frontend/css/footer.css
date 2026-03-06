@@ -1,0 +1,64 @@
+/* Rodapé */
+.site-footer {
+  margin-top: 2rem;
+  color: #e5e7ff;
+}
+.footer__grid {
+  padding-block: clamp(2rem, 5vw, 3rem);
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem;
+}
+.footer__heading {
+  margin: 0 0 0.75rem;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+.footer__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.5rem;
+}
+.footer__list a {
+  color: #c7ccff;
+  text-decoration: none;
+  font-size: 0.875rem;
+}
+.footer__list a:hover {
+  color: #fff;
+}
+.footer__list--muted li {
+  color: #c7ccff;
+  font-size: 0.875rem;
+}
+
+.footer__bar {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  background: transparent;
+}
+.footer__barinner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  padding-block: 1.5rem;
+}
+.footer__copy {
+  margin: 0;
+  color: #c7ccff;
+  font-size: 0.875rem;
+}
+
+@media (max-width: 820px) {
+  .footer__grid {
+    grid-template-columns: 1fr;
+  }
+  .footer__barinner {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.75rem;
+  }
+}

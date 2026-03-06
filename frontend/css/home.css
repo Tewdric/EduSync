@@ -34,16 +34,6 @@
 *::before,
 *::after { box-sizing: border-box; }
 
-html, body { height: 100%; }
-body {
-  margin: 0;
-  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
-  color: var(--text);
-  background: var(--bg);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
 img { display: block; max-width: 100%; }
 
 .sr-only{
@@ -105,26 +95,6 @@ img { display: block; max-width: 100%; }
   width: auto;
   display: block;
 }
-
-.nav__list{
-  display: flex; gap: 1.5rem;
-  list-style: none;
-  margin: 0; padding: 0;
-}
-
-.nav{
-  flex: 1 1 auto;
-  display: flex;
-  justify-content: center;
-  min-width: 0; 
-}
-
-.nav__link{
-  color: var(--muted);
-  text-decoration: none;
-  font-size: 1rem;
-}
-.nav__link:hover { color: var(--text); }
 
 .header__actions{
   margin-left: auto;
@@ -307,87 +277,7 @@ img { display: block; max-width: 100%; }
   .card-grid--3{ grid-template-columns: repeat(3, minmax(0,1fr)); }
 }
 
-/* Cards */
-.inst-card, .event-card, .news-card{
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: 16px;
-  box-shadow: 0 1px 2px rgba(0,0,0,.06);
-  overflow: hidden;
-}
-.inst-card{ position: relative; }
-.inst-card__media img{
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-}
-.inst-card__body{
-  padding: 1.5rem;
-}
 
-.inst-card__title{
-  margin: 0 0 .75rem;
-  font-size: 1.25rem;
-  font-weight: 600;
-}
-
-.meta{
-  list-style: none; margin: 0; padding: 0;
-  display: grid; gap: .5rem;
-}
-.meta--grid{
-  grid-template-columns: repeat(2, minmax(0,1fr));
-}
-.meta--spread{
-  display:flex; flex-wrap:wrap; gap:1rem; color: var(--muted);
-}
-.meta__item{
-  display: inline-flex; align-items: center; gap: .5rem;
-  color: var(--muted);
-  font-size: 0.875rem;
-}
-
-.rating{
-  margin-left: .5rem; color: var(--muted);
-}
-.star{ color: var(--orange); margin-left: .125rem; }
-
-.tags{
-  display: flex; flex-wrap: wrap; gap: .5rem;
-  margin-top: .75rem;
-}
-.tag{
-  display: inline-flex; align-items: center; height: 28px;
-  padding: 0 .6rem; border-radius: 999px;
-  background: #eef2f7; color: #1f2937; font-size: 0.875rem;
-  border: 1px solid rgba(31,41,55,.08);
-}
-.tag--muted{ color: var(--muted); }
-
-.alert{
-  margin-top: 1.5rem;
-  background: #e9f1ff;
-  border: 1px solid #d6e4ff;
-  color: #0b3a8a;
-  padding: .75rem .875rem;
-  border-radius: 10px;
-  font-size: 0.875rem;
-}
-
-.actions{
-  display: flex; gap: 1rem;
-  margin-top: 1.5rem;
-}
-
-.chip{
-  position: absolute; top: .75rem; left: .75rem;
-  background: #eef2f7; color:#1f2937;
-  padding: .25rem .6rem; border-radius: 999px;
-  font-size: 12px; border: 1px solid rgba(31,41,55,.08);
-}
-.chip--soft{ background: #f3f4f6; }
-
-.section-cta{ display:flex; justify-content:center; margin-top: 2rem; }
 
 /* Eventos */
 .event-card__media{ position: relative; }
@@ -435,49 +325,12 @@ img { display: block; max-width: 100%; }
 }
 .link-arrow::after{ content: " →"; }
 
-/* Rodapé */
-.site-footer{
-  margin-top: 2rem;
-  color: #e5e7ff;
-}
-.footer__grid{
-  padding-block: clamp(2rem, 5vw, 3rem);
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0,1fr));
-  gap: 2rem;
-}
-.footer__heading{
-  margin: 0 0 .75rem;
-  color: #fff;
-  font-weight: 600;
-  font-size: 1.125rem;
-}
-.footer__list{ list-style: none; margin: 0; padding: 0; display: grid; gap: .5rem; }
-.footer__list a{ color: #c7ccff; text-decoration: none; font-size: 0.875rem; }
-.footer__list a:hover{ color: #fff; }
-.footer__list--muted li{ color: #c7ccff; font-size: 0.875rem; }
-
-.footer__bar{
-  border-top: 1px solid rgba(255,255,255,.08);
-  background: transparent;
-}
-.footer__barinner{
-  display:flex; align-items:center; justify-content:center; gap: 1.5rem;
-  padding-block: 1.5rem;
-}
-.footer__copy{ margin: 0; color: #c7ccff; font-size: 0.875rem; }
-
 /* Responsividade */
 @media (max-width: 720px){
   .nav{ display: none; }
   .search__input{ min-width: 160px; }
   .meta--grid{ grid-template-columns: 1fr; }
   .actions{ flex-direction: column; }
-}
-
-@media (max-width: 820px){
-  .footer__grid{ grid-template-columns: 1fr; }
-  .footer__barinner{ flex-direction: column; text-align: center; gap: 0.75rem; }
 }
 
 .newsletter{ color: #eef2ff; padding-block: clamp(2.5rem, 7vw, 4rem); border-top: 1px solid rgba(255,255,255,.08); }

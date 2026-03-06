@@ -1,0 +1,27 @@
+@import url('home.css');
+@import url('nav.css');
+@import url('footer.css');
+@import url('instituicoes.css');
+@import url('admin-dashboard.css');
+@import url('login.css');
+@import url('signup.css');
+@import url('card.css');
+
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0; 
+}
+
+html, body { height: 100%; }
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

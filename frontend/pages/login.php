@@ -1,14 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - EduSync</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/login.css">
-</head>
+<?php
+include '../component/head.php'
+?>
 <body>
     <div class="login-container">
         <div class="login-box">
@@ -34,7 +28,8 @@
                     <a href="Home.html" class="login-button">Entrar</a>
                 </div>
                 <div class="links">
-                    <a href="signup.html" class="signup-link">Não tem cadastro? Cadastre-se</a>
+                    <a href="signup.html" class="signup-link">Não tem cadastro? Cadastre-se</a><br>
+                    <a href="home.php" class="signup-link">Voltar</a>
                 </div>
             </form>
         </div>
@@ -60,6 +55,6 @@
                 </div>
             </div>
         </div>
-    <script src="js/login.js" defer></script>
+    <script src="../js/login.js" defer></script>
 </body>
 </html>
